@@ -1,0 +1,17 @@
+def maxdel(a,b):
+    c=0
+    while a!=b:
+        if a>b:
+            c = a-b
+            a=b
+            b=c
+        else:
+            c=b-a
+            a=b
+            b=c
+    return c
+a,b=map(int,input().split())
+m = a*b
+nok = m//(maxdel(a,b))
+print(maxdel(a,b))
+print(nok)
